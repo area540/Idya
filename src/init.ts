@@ -4,7 +4,6 @@
 import logger from './util/logger.js';
 import * as Discord from 'discord.js';
 import * as fs from 'fs';
-import { time } from 'console';
 
 // exit message
 process.on('exit', (code) => {
@@ -39,4 +38,7 @@ client.once('ready', () => {
     `);
 });
 
-client.login(JSON.parse(fs.readFileSync('./data/settings.json', 'utf-8')).DISCORDTOKEN);
+client
+    .login(JSON.parse(fs.readFileSync('./data/settings.json', 'utf-8')).DISCORDTOKEN);
+
+    
